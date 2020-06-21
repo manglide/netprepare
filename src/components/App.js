@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/img/logo.svg';
+import '../assets/css/App.css';
+import ErrorBoundary from '../errors'
 
 function App() {
   return (
     <div className="App">
+      <ErrorBoundary>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      </ErrorBoundary>
     </div>
   );
 }
